@@ -24,9 +24,9 @@ def webhook():
 
     subadmin_area = req['queryResult']['parameters']['location'][0]
 
-    print(subadmin_area)
+    print(subadmin_area['admin-area'])
 
-    city_detector = Moduuu.city_detector(subadmin_area)
+    city_detector = Moduuu.city_detector(subadmin_area['admin-area'])
 
     weather_message = Moduuu.weather(city_detector)
 
